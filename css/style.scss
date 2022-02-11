@@ -1,38 +1,57 @@
+@import 'fonts';
+@import 'colors';
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
+
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Supermercado';
-    font-size: 18px;
+    font-family: $font-family-main;
+    font-size: $font-size;
     line-height: 1.5;
-    font-weight: 400;
-    color: #FFFFFF;
-    background-color: #383A40;
+    font-weight: $font-weight;
+    color:$basic-black;
+    background-color: $basic-white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-main ;
 }
 
 .page {
 margin: 0;
 padding: 0;
-font-family: 'Supermercado';
-font-size: 18px;
+font-family:$font-family-1;
+font-size: $font-size;
 line-height: 1.5;
-font-weight: 400;
-color: #FFFFFF;
-background-color: #383A40;
-    .header{
-        .container{
-            .menu{
-                .menu__link {
-                    .menu_active{
-                        position: relative;
-                    }
-                }
-            }
+font-weight: $font-weight;
+color:$basic-black;
+background-color:$basic-white;
+}
+.container{
+width: 100%;
+max-width: 937px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    &__link {
+        text-decoration: none;
+        color: $basic-neutral;
+        font-family: $font-family-main;
+        &_active{
+            color: $basic-black;
+            text-decoration: none;
+            font-family: $font-family-main;
         }
     }
 }
+
+
