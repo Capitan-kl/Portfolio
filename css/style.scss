@@ -6,7 +6,6 @@
 box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -42,12 +41,22 @@ max-width: 937px;
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
+    max-width: 937px;
+    width: 100%;
     &__link {
         text-decoration: none;
         color: $basic-neutral;
         font-family: $font-family-main;
+        margin-right: 8.8rem ;
         &_active{
             color: $basic-black;
+            text-decoration: none;
+            font-family: $font-family-main;
+            margin-right: 8.8rem;
+        }
+        &_last {
+            margin: 0;
+            color: $basic-neutral;
             text-decoration: none;
             font-family: $font-family-main;
         }
