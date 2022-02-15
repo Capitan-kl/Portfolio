@@ -77,14 +77,91 @@ h1, h2, h3, h4, h5, h6 {
   color: #688E62;
 }
 .menu__line {
-  margin-top: 1.8rem;
-  margin-bottom: 1.97rem;
-}
-.menu__line_style {
+  margin-top: 4.8rem;
+  margin-bottom: 0.97rem;
   border-top: 2px solid #828282;
-  box-shadow: 0 10px 10px -10px #000 inset;
+  max-width: 937px;
+  width: 100%;
 }
 
+#pacman {
+  width: 27px;
+  height: 27px;
+  background-image: url(/img/pacman-pixel.png);
+  background-size: 27px 27px;
+  position: relative;
+  top: -29px;
+}
+
+#ghost {
+  width: 54px;
+  height: 36px;
+  background-image: url(/img/packman-game.png);
+  background-size: 54px 36px;
+  position: relative;
+  top: -65px;
+  left: 897px;
+  -webkit-animation: ghostMov 2s infinite linear;
+          animation: ghostMov 2s infinite linear;
+}
+
+@-webkit-keyframes ghostMov {
+  0% {
+    left: 897px;
+  }
+  100% {
+    left: -18px;
+  }
+}
+
+@keyframes ghostMov {
+  0% {
+    left: 897px;
+  }
+  100% {
+    left: -18px;
+  }
+}
+.jump {
+  -webkit-animation: jump 0.5s linear;
+          animation: jump 0.5s linear;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    top: -1.6rem;
+  }
+  30% {
+    top: -54px;
+  }
+  50% {
+    top: -108px;
+  }
+  80% {
+    top: -3rem;
+  }
+  100% {
+    top: -1.6rem;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: -1.6rem;
+  }
+  30% {
+    top: -54px;
+  }
+  50% {
+    top: -108px;
+  }
+  80% {
+    top: -3rem;
+  }
+  100% {
+    top: -1.6rem;
+  }
+}
 .page__content {
   margin: 0;
   padding: 0;

@@ -39,16 +39,16 @@ max-width: 937px;
 margin: 0 auto;
 }
 .menu{
-    display: flex;
-    flex-direction: row;
-    justify-content:flex-start;
-    text-transform: capitalize;
-    font-family: $font-family-main;
+display: flex;
+flex-direction: row;
+justify-content:flex-start;
+text-transform: capitalize;
+font-family: $font-family-main;
     &__link {
-        text-decoration: none;
-        color: $basic-neutral;
-        margin-right: 8.8rem ;
-        margin-top: 1.8rem;
+    text-decoration: none;
+    color: $basic-neutral;
+    margin-right: 8.8rem ;
+    margin-top: 1.8rem;
         &:hover {
             color: $basic-black;
         }
@@ -74,12 +74,62 @@ margin: 0 auto;
         }
     }
     &__line {
-        margin-top: 1.8rem ;
-        margin-bottom: 1.97rem;
-        &_style {
-            border-top: 2px solid $basic-neutral;
-	        box-shadow: 0 10px 10px -10px $basic-black-2 inset;
-        }
+    margin-top: 4.8rem ;
+    margin-bottom: 0.97rem;
+    border-top: 2px solid $basic-neutral;
+    max-width: 937px;
+    width: 100%;
+    }
+    
+}
+
+#pacman {
+width: 27px;
+height: 27px;
+background-image: url(/img/pacman-pixel.png);
+background-size: 27px 27px;
+position: relative;
+top: -29px;
+}
+#ghost {
+width: 54px;
+height: 36px;
+background-image: url(/img/packman-game.png);
+background-size: 54px 36px;
+position: relative;
+top: -65px;
+left: 897px;
+animation: ghostMov 2s infinite linear;
+}
+
+@keyframes ghostMov {
+    0% {
+    left:897px ;
+    }
+    100% {
+    left: -18px;
+    }
+}
+
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% {
+    top:-1.6rem ;
+    }
+    30% {
+    top: -54px;
+    }
+    50% {
+    top: -108px;
+    }
+    80% {
+    top: -3rem;
+    }
+    100% {
+    top: -1.6rem;
     }
 }
 .page__content {
