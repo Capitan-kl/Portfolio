@@ -36,31 +36,72 @@ background-color:$basic-white;
 .container{
 width: 100%;
 max-width: 937px;
+margin: 0 auto;
 }
 .menu{
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
-    max-width: 937px;
-    width: 100%;
+    text-transform: capitalize;
+    font-family: $font-family-main;
     &__link {
         text-decoration: none;
         color: $basic-neutral;
-        font-family: $font-family-main;
         margin-right: 8.8rem ;
-        &_active{
+        margin-top: 1.8rem;
+        &:hover {
             color: $basic-black;
-            text-decoration: none;
-            font-family: $font-family-main;
-            margin-right: 8.8rem;
+        }
+        &:active {
+            opacity: 0.7;
+            color: $special;
+        }
+        &_active{
+        color: $basic-black;
+        text-decoration: none;
+        margin-right: 8.8rem;
+        margin-top: 1.8rem;
         }
         &_last {
-            margin: 0;
+            margin-top: 1.8rem;
             color: $basic-neutral;
             text-decoration: none;
-            font-family: $font-family-main;
+        &:hover {
+            color: $basic-black;}
+        &:active {
+            opacity: 0.7;
+            color: $special;}
+        }
+    }
+    &__line {
+        margin-top: 1.8rem ;
+        margin-bottom: 1.97rem;
+        &_style {
+            border-top: 2px solid $basic-neutral;
+	        box-shadow: 0 10px 10px -10px $basic-black-2 inset;
         }
     }
 }
+.page__content {
+margin: 0;
+padding: 0;
+}
 
+.main {
+width: 100%;
+max-width: 937px;
+margin: 0 auto;
+    // &__container {
+    //     &__content {
+    //         &__title {}
+    //         &__paragraf {}
+    //         &__language {
+    //             .button {}
+    //         }
+    //     }
+    // }
+}
+
+//button rus_lang
+//button en_lang active_lang"
 

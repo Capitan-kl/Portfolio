@@ -35,30 +35,63 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   width: 100%;
   max-width: 937px;
+  margin: 0 auto;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  max-width: 937px;
-  width: 100%;
+  text-transform: capitalize;
+  font-family: "Supermercado One";
 }
 .menu__link {
   text-decoration: none;
   color: #828282;
-  font-family: "Supermercado One";
   margin-right: 8.8rem;
+  margin-top: 1.8rem;
+}
+.menu__link:hover {
+  color: #070707;
+}
+.menu__link:active {
+  opacity: 0.7;
+  color: #688E62;
 }
 .menu__link_active {
   color: #070707;
   text-decoration: none;
-  font-family: "Supermercado One";
   margin-right: 8.8rem;
+  margin-top: 1.8rem;
 }
 .menu__link_last {
-  margin: 0;
+  margin-top: 1.8rem;
   color: #828282;
   text-decoration: none;
-  font-family: "Supermercado One";
+}
+.menu__link_last:hover {
+  color: #070707;
+}
+.menu__link_last:active {
+  opacity: 0.7;
+  color: #688E62;
+}
+.menu__line {
+  margin-top: 1.8rem;
+  margin-bottom: 1.97rem;
+}
+.menu__line_style {
+  border-top: 2px solid #828282;
+  box-shadow: 0 10px 10px -10px #000 inset;
+}
+
+.page__content {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  max-width: 937px;
+  margin: 0 auto;
 }
