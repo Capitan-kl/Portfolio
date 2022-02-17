@@ -15,12 +15,20 @@ body {
     font-weight: $font-weight;
     color:$basic-black;
     background-color: $basic-white;
+    max-width: 1445px;
+    width: 100%;
 }
 
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
     padding: 0;
     font-family: $font-family-main ;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-1;
 }
 
 .page {
@@ -38,6 +46,7 @@ width: 100%;
 max-width: 937px;
 margin: 0 auto;
 }
+// NAV
 .menu{
 display: flex;
 flex-direction: row;
@@ -75,14 +84,15 @@ font-family: $font-family-main;
     }
     &__line {
     margin-top: 4.8rem ;
-    margin-bottom: 0.97rem;
+    margin-bottom: 1.97rem;
     border-top: 2px solid $basic-neutral;
     max-width: 937px;
     width: 100%;
+    max-height: 0;
     }
     
 }
-
+// GAME 
 #pacman {
 width: 27px;
 height: 27px;
@@ -136,22 +146,100 @@ animation: ghostMov 2s infinite linear;
 margin: 0;
 padding: 0;
 }
-
+// BASE
 .main {
 width: 100%;
-max-width: 937px;
+max-width: 1445px;
 margin: 0 auto;
-    // &__container {
-    //     &__content {
-    //         &__title {}
-    //         &__paragraf {}
-    //         &__language {
-    //             .button {}
-    //         }
-    //     }
-    // }
+    &__container {
+        width: 100%;
+        max-width: 937px;
+        margin: 0 auto;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: flex-end;
+        margin-bottom: 2.5rem;
+    }
+    &__title {
+        font-size: 2.63rem;
+        font-weight: $font-weight;
+        line-height: 3.14rem;
+        overflow-wrap: break-word;
+        max-width: 16rem;
+    }
+    &__paragraf {
+        max-width: 8.6rem;
+        overflow-wrap: break-word;
+    }
+    &__language {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        max-height: 5rem;
+        height: 100%;
+        padding-bottom: 0.5rem;
+    }
+    &__photo {
+        margin-bottom: 6rem;
+    }
 }
 
-//button rus_lang
-//button en_lang active_lang"
+.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-family-1;
+    font-size: 0.88rem;
+    font-weight: $font-weight;
+    -webkit-transform: rotate(180deg); 
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    writing-mode:vertical-rl;
+    color: $basic-black-2;
+}
 
+.rus-lang {
+    color: $basic-neutral;
+}
+
+.en-lang {
+    margin-top: 1rem;
+    &::before {
+        content: '\2009 ''|' '\2009 ';
+    }
+}
+
+//button en_lang active_lang
+
+// ABOUT ME
+
+.main-block {
+    max-width: 80rem;
+    width: 100%;
+    max-height: 28rem;
+    height: 100%;
+    background-color: $basic-grey-2;
+    margin: 0 auto;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        font-size: 1.88rem;
+        font-weight: $font-weight;
+        line-height: 2.22rem;
+        margin-bottom: 1rem;
+        padding-top: 6.6rem;
+    }
+    &__paragraf {
+        margin-bottom: 1.5rem;
+    }
+    &__paragraf_last {
+        padding-bottom: 8.6rem;
+    }
+}

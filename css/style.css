@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -13,12 +14,20 @@ body {
   font-weight: 400;
   color: #070707;
   background-color: #fff;
+  max-width: 1445px;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   font-family: "Supermercado One";
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed";
 }
 
 .page {
@@ -78,10 +87,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .menu__line {
   margin-top: 4.8rem;
-  margin-bottom: 0.97rem;
+  margin-bottom: 1.97rem;
   border-top: 2px solid #828282;
   max-width: 937px;
   width: 100%;
+  max-height: 0;
 }
 
 #pacman {
@@ -169,6 +179,90 @@ h1, h2, h3, h4, h5, h6 {
 
 .main {
   width: 100%;
+  max-width: 1445px;
+  margin: 0 auto;
+}
+.main__container {
+  width: 100%;
   max-width: 937px;
   margin: 0 auto;
+}
+.main__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+.main__title {
+  font-size: 2.63rem;
+  font-weight: 400;
+  line-height: 3.14rem;
+  overflow-wrap: break-word;
+  max-width: 16rem;
+}
+.main__paragraf {
+  max-width: 8.6rem;
+  overflow-wrap: break-word;
+}
+.main__language {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  max-height: 5rem;
+  height: 100%;
+  padding-bottom: 0.5rem;
+}
+.main__photo {
+  margin-bottom: 6rem;
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed";
+  font-size: 0.88rem;
+  font-weight: 400;
+  transform: rotate(180deg);
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  color: #000;
+}
+
+.rus-lang {
+  color: #828282;
+}
+
+.en-lang {
+  margin-top: 1rem;
+}
+.en-lang::before {
+  content: " " "|" " ";
+}
+
+.main-block {
+  max-width: 80rem;
+  width: 100%;
+  max-height: 28rem;
+  height: 100%;
+  background-color: #f6f6f6;
+  margin: 0 auto;
+}
+.main-block__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-block__title {
+  font-size: 1.88rem;
+  font-weight: 400;
+  line-height: 2.22rem;
+  margin-bottom: 1rem;
+  padding-top: 6.6rem;
+}
+.main-block__paragraf {
+  margin-bottom: 1.5rem;
+}
+.main-block__paragraf_last {
+  padding-bottom: 8.6rem;
 }
