@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Supermercado One";
 }
 
-p {
+p, ul, li {
   margin: 0;
   padding: 0;
   font-family: "Barlow Semi Condensed";
@@ -265,4 +265,94 @@ p {
 }
 .main-block__paragraf_last {
   padding-bottom: 8.6rem;
+}
+
+.main-section {
+  width: 100%;
+  max-width: 937px;
+  margin: 0 auto;
+}
+.main-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-section__title {
+  font-size: 1.88rem;
+  font-weight: 400;
+  line-height: 2.22rem;
+  margin-bottom: 3.5rem;
+}
+.main-section__paragraf {
+  margin-bottom: 4.4rem;
+}
+.main-section__block {
+  width: 100%;
+  max-width: 937px;
+}
+.main-section__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 12.3rem;
+  color: #828282;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.main-section__list-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 5rem;
+}
+.main-section__list-block:first-child {
+  margin-left: 2rem;
+}
+.main-section__list-block:last-child {
+  margin: 0;
+}
+.main-section__list-block_mod {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.el-1, .el-3, .el-5 {
+  margin-bottom: 1rem;
+}
+
+.el-7 {
+  margin-bottom: 1.7rem;
+}
+
+.el-2, .el-4, .el-6, .el-8 {
+  margin-bottom: 2.2rem;
+}
+
+.star::after {
+  content: "";
+  display: block;
+  background-image: url(/img/Star.svg);
+  background-repeat: no-repeat;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.5rem;
+}
+.star__last {
+  content: "";
+  display: block;
+  background-image: url(/img/Star-1.svg);
+  background-repeat: no-repeat;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.5rem;
+}
+.star__last:hover {
+  content: attr(data-name);
+  display: block;
+  background-image: url(/img/Star.svg);
+  background-repeat: no-repeat;
+  width: 1.4rem;
+  height: 1.4rem;
 }
