@@ -243,6 +243,7 @@ margin: 0 auto;
         padding-bottom: 8.6rem;
     }
 }
+// SKILLS
 
 .main-section {
     width: 100%;
@@ -264,7 +265,10 @@ margin: 0 auto;
     }
     &__block {
         width: 100%;
-        max-width: 937px;
+        max-width: 52rem;
+        height: 100%;
+        max-height: 11.6rem;
+        margin-bottom: 6.2rem;
     }
     &__list {
         display: flex;
@@ -281,9 +285,6 @@ margin: 0 auto;
         flex-direction: column;
         align-items: center;
         margin-right: 5rem;
-        &:first-child {
-            margin-left: 2rem;
-        }
         &:last-child {
             margin: 0;
         }
@@ -302,17 +303,8 @@ margin: 0 auto;
 .el-7 {
     margin-bottom: 1.7rem;
 }
-
 .el-2, .el-4, .el-6, .el-8 {
     margin-bottom: 2.2rem ;
-    // &::after {
-    //     content:"";
-    //     display:block;
-    //     background-image: url(/img/Star.svg);
-    //     background-repeat: no-repeat;
-    //     width: 1.4rem;
-    //     height: 1.4rem;
-    // }
 }
 
 .star {
@@ -343,3 +335,41 @@ margin: 0 auto;
         }
     }
 }
+
+// PORTFOLIO
+
+.main-pro {
+    max-width: 80rem;
+    width: 100%;
+    max-height: 83rem;
+    height: 100%;
+    background-color: $basic-grey-2;
+    margin: 0 auto;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+    &__title {
+        font-size: 1.88rem;
+        font-weight: $font-weight;
+        line-height: 2.22rem;
+        margin-top: 6.2rem;
+        margin-bottom: 2.6rem;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.work-flow {
+    margin-bottom: 2.4rem;
+    &_paragraf {
+        margin-bottom: 3rem;
+        color: $basic-black;
+    }
+}
+
+                    
