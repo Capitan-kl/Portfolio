@@ -402,8 +402,24 @@ margin: 0 auto;
     margin-bottom: 1.6rem;
     }
     &__social {
-        &_row {}
+    margin-top: 4.7rem;
+    margin-bottom: 11rem;
+        &_row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        }
     }
 }
 
-// .button
+.telegram, .instagram, .github {
+margin-right: 3.4rem;
+}
+
+.button-contacts {
+color: $basic-white;
+background-color: $basic-black;
+text-decoration: none;
+padding: 0.5rem 2rem;
+border-radius: 1.5rem;
+}

@@ -421,3 +421,24 @@ p, ul, li {
 .footer__paragraf {
   margin-bottom: 1.6rem;
 }
+.footer__social {
+  margin-top: 4.7rem;
+  margin-bottom: 11rem;
+}
+.footer__social_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.telegram, .instagram, .github {
+  margin-right: 3.4rem;
+}
+
+.button-contacts {
+  color: #fff;
+  background-color: #070707;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border-radius: 1.5rem;
+}
