@@ -282,6 +282,7 @@ p, ul, li {
   font-weight: 400;
   line-height: 2.22rem;
   margin-bottom: 3.5rem;
+  margin-top: 5rem;
 }
 .main-section__paragraf {
   margin-bottom: 4.4rem;
@@ -389,14 +390,6 @@ p, ul, li {
 .work-flow_paragraf {
   margin-bottom: 3rem;
   color: #070707;
-}
-
-.page__footer {
-  max-width: 80rem;
-  width: 100%;
-  max-height: 34.5rem;
-  height: 100%;
-  margin: 0 auto;
 }
 
 .footer {

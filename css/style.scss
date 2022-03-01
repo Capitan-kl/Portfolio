@@ -1,5 +1,30 @@
 @import 'fonts';
 @import 'colors';
+
+@mixin flx-block-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flx-block-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin container-size {
+    width: 100%;
+    max-width: 937px;
+    margin: 0 auto;
+}
+
+@mixin start-mod {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-main ;
+}
+
 *,
 *::before,
 *::after {
@@ -7,9 +32,7 @@ box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: $font-family-main;
+    @include start-mod();
     font-size: $font-size;
     line-height: 1.5;
     font-weight: $font-weight;
@@ -20,9 +43,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    padding: 0;
-    font-family: $font-family-main ;
+    @include start-mod();
 }
 
 p, ul, li {
@@ -42,9 +63,7 @@ color:$basic-black;
 background-color:$basic-white;
 }
 .container{
-width: 100%;
-max-width: 937px;
-margin: 0 auto;
+@include container-size();
 }
 // NAV
 .menu{
@@ -152,9 +171,7 @@ width: 100%;
 max-width: 1445px;
 margin: 0 auto;
     &__container {
-        width: 100%;
-        max-width: 937px;
-        margin: 0 auto;
+        @include container-size();
     }
     &__content {
         display: flex;
@@ -225,9 +242,7 @@ margin: 0 auto;
     background-color: $basic-grey-2;
     margin: 0 auto;
     &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flx-block-col();
     }
     &__title {
         font-size: 1.88rem;
@@ -246,19 +261,16 @@ margin: 0 auto;
 // SKILLS
 
 .main-section {
-    width: 100%;
-    max-width: 937px;
-    margin: 0 auto;
+    @include container-size();
     &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flx-block-col();
     }
     &__title {
         font-size: 1.88rem;
         font-weight: $font-weight;
         line-height: 2.22rem;
         margin-bottom: 3.5rem;
+        margin-top: 5rem;
     }
     &__paragraf {
         margin-bottom: 4.4rem;
@@ -271,9 +283,7 @@ margin: 0 auto;
         margin-bottom: 6.2rem;
     }
     &__list {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flx-block-row();
         list-style: none;
         margin-bottom: 12.3rem;
         color: $basic-neutral;
@@ -281,18 +291,14 @@ margin: 0 auto;
         font-size: $font-size-1;
     }
     &__list-block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flx-block-col();
         margin-right: 5rem;
         &:last-child {
             margin: 0;
         }
     }
     &__list-block_mod {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flx-block-row();
     }
     
 }
@@ -346,9 +352,7 @@ margin: 0 auto;
     background-color: $basic-grey-2;
     margin: 0 auto;
     &__content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flx-block-col();
         }
     &__title {
         font-size: 1.88rem;
@@ -358,9 +362,7 @@ margin: 0 auto;
         margin-bottom: 2.6rem;
     }
     &__block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flx-block-col();
     }
 }
 
@@ -372,13 +374,13 @@ margin: 0 auto;
     }
 }
 
-.page__footer {
-max-width: 80rem;
-width: 100%;
-max-height: 34.5rem;
-height: 100%;
-margin: 0 auto;
-}
+// .page__footer {
+// max-width: 80rem;
+// width: 100%;
+// max-height: 34.5rem;
+// height: 100%;
+// margin: 0 auto;
+// }
 
 .footer {
 max-width: 80rem;
@@ -387,9 +389,7 @@ max-height: 34.5rem;
 height: 100%;
 margin: 0 auto;
     &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flx-block-col();
     }
     &__title {
     font-size: 1.88rem;
@@ -405,9 +405,7 @@ margin: 0 auto;
     margin-top: 4.7rem;
     margin-bottom: 11rem;
         &_row {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flx-block-row();
         }
     }
 }
