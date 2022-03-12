@@ -1,14 +1,35 @@
 @charset "UTF-8";
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Supermercado One";
+  scroll-behavior: smooth;
   font-size: 18px;
   line-height: 1.5;
   font-weight: 400;
@@ -186,6 +207,17 @@ p, ul, li {
   width: 100%;
   max-width: 937px;
   margin: 0 auto;
+  -webkit-animation: fade-in 2s ease;
+          animation: fade-in 2s ease;
+}
+.main__container .element-animation {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: all 2s ease 0s;
+}
+.main__container .element-animation .element-show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .main__content {
   display: flex;
@@ -247,6 +279,17 @@ p, ul, li {
   height: 100%;
   background-color: #f6f6f6;
   margin: 0 auto;
+  -webkit-animation: fade-in 2s ease;
+          animation: fade-in 2s ease;
+}
+.main-block .element-animation {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: all 2s ease 0s;
+}
+.main-block .element-animation .element-show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .main-block__content {
   display: flex;
@@ -271,6 +314,8 @@ p, ul, li {
   width: 100%;
   max-width: 937px;
   margin: 0 auto;
+  -webkit-animation: fade-in 2s ease;
+          animation: fade-in 2s ease;
 }
 .main-section__content {
   display: flex;
@@ -365,6 +410,8 @@ p, ul, li {
   height: 100%;
   background-color: #f6f6f6;
   margin: 0 auto;
+  -webkit-animation: fade-in 2s ease;
+          animation: fade-in 2s ease;
 }
 .main-pro__content {
   display: flex;
@@ -398,6 +445,8 @@ p, ul, li {
   max-height: 34.5rem;
   height: 100%;
   margin: 0 auto;
+  -webkit-animation: fade-in 2s ease;
+          animation: fade-in 2s ease;
 }
 .footer__content {
   display: flex;
@@ -434,4 +483,45 @@ p, ul, li {
   text-decoration: none;
   padding: 0.5rem 2rem;
   border-radius: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  width: 100%;
+  max-width: 40rem;
+  max-height: 40rem;
+  color: #070707;
+  font-family: "Barlow Semi Condensed";
+  margin: 0 auto;
+}
+.modal__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.modal__window {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.modal__contact {
+  margin-bottom: 0.5rem;
+}
+
+.form_email {
+  margin-left: 2rem;
+}
+
+.mod-1 {
+  margin-top: 2rem;
+  margin-left: 10rem;
+}
+
+.email {
+  margin-left: 12.3rem;
 }

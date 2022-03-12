@@ -25,14 +25,39 @@
     font-family: $font-family-main ;
 }
 
+@mixin animation-on {
+    opacity: 1;
+    transform:translateY(0);
+}
+
+@mixin animation-off {
+    opacity: 0;
+    transform:translateY(-1rem);
+    transition: all 2s ease 0s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 *,
 *::before,
 *::after {
 box-sizing: border-box;
 }
 
+html {
+scroll-behavior: smooth;
+}
+
 body {
     @include start-mod();
+    scroll-behavior: smooth;
     font-size: $font-size;
     line-height: 1.5;
     font-weight: $font-weight;
@@ -80,6 +105,17 @@ font-family: $font-family-main;
         &:hover {
             color: $basic-black;
         }
+        // &:hover {
+        // width: 0%;
+        // height: 3px;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // content: '';
+        // transform: translate3d(-50%, -50%, 0);
+        // transition: width ease .3s;
+        // background: $basic-black;
+        // }
         &:active {
             opacity: 0.7;
             color: $special;
@@ -172,6 +208,13 @@ max-width: 1445px;
 margin: 0 auto;
     &__container {
         @include container-size();
+        animation: fade-in 2s ease;
+        & .element-animation{
+            @include animation-off();
+            & .element-show {
+                @include animation-on();
+            }
+        }
     }
     &__content {
         display: flex;
@@ -210,10 +253,7 @@ margin: 0 auto;
     font-family: $font-family-1;
     font-size: 0.88rem;
     font-weight: $font-weight;
-    -webkit-transform: rotate(180deg); 
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+    
     transform: rotate(180deg);
     writing-mode:vertical-rl;
     color: $basic-black-2;
@@ -241,6 +281,13 @@ margin: 0 auto;
     height: 100%;
     background-color: $basic-grey-2;
     margin: 0 auto;
+    animation: fade-in 2s ease;
+    & .element-animation{
+        @include animation-off();
+        & .element-show {
+            @include animation-on();
+        }
+    }
     &__content {
         @include flx-block-col();
     }
@@ -262,6 +309,13 @@ margin: 0 auto;
 
 .main-section {
     @include container-size();
+    animation: fade-in 2s ease;
+    // & .element-animation{
+    //     @include animation-off();
+    //     & .element-show {
+    //         @include animation-on();
+    //     }
+    // }
     &__content {
         @include flx-block-col();
     }
@@ -351,6 +405,7 @@ margin: 0 auto;
     height: 100%;
     background-color: $basic-grey-2;
     margin: 0 auto;
+    animation: fade-in 2s ease;
     &__content{
         @include flx-block-col();
         }
@@ -388,6 +443,7 @@ width: 100%;
 max-height: 34.5rem;
 height: 100%;
 margin: 0 auto;
+animation: fade-in 2s ease;
     &__content {
     @include flx-block-col();
     }
@@ -421,3 +477,44 @@ text-decoration: none;
 padding: 0.5rem 2rem;
 border-radius: 1.5rem;
 }
+
+// MODAL-WINDOW
+
+.hidden {
+display: none;
+}
+
+.modal {
+    width: 100%;
+    max-width: 40rem;
+    max-height: 40rem;
+    color: $basic-black;
+    font-family: $font-family-1;
+    margin: 0 auto;
+    &__container{
+        @include flx-block-row();
+        justify-content: center
+    }
+    &__window {
+        @include flx-block-row();
+        justify-content: flex-start;
+    }
+    &__contact {
+        margin-bottom: 0.5rem;
+    }
+}                
+
+.form_email {
+    margin-left: 2rem;
+}
+
+.mod-1 {
+    margin-top: 2rem;
+    margin-left: 10rem ;
+    }
+// .custom-form
+.email {
+    margin-left: 12.3rem;
+}
+
+
