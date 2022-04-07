@@ -10,6 +10,7 @@
 - semantic layout;
 - using Sass, [Less] preprocessors                  :white_check_mark:
 - using [bootstrap] v5.1 library
+- using [webpack] library for packege               :white_check_mark:
 
 *Js*:
 
@@ -32,6 +33,7 @@
 [Eloquent Javascript]: https://habr.com/ru/post/240219/
 [Code Wars]: https://www.codewars.com
 [Code-basic]: https://ru.code-basics.com
+[webpack]: https://webpack.js.org
 
 
 For remember:
